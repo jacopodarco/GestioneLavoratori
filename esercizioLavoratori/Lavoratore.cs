@@ -32,13 +32,17 @@ namespace esercizioLavoratori
         {
             return System.Environment.NewLine +
                 "Nome: " + Nome + " " +
-                "Cognome: " + Cognome + " " +
-                "Età: " + Età + " " +
-                "Sesso: " + Genere + " ";
+                "Cognome: " + Cognome;
         }
-        public static int StipendioMensile()
+        public virtual float StipendioMensile()
         {
-            return
+          return 0 ;
         }
+        public virtual float Tasse()
+        {
+            return 0;
+        }
+       
     }
 }
+

@@ -9,7 +9,7 @@ namespace esercizioLavoratori
     class LavoratoriDipendenti : Lavoratore
     {
         //definisco proprietà dei lavoratori autonomi
-        public int Stipendio { get; set; }
+        public float Stipendio { get; set; }
         public int AnniAssunzione { get; set; }
 
         //definisco un costruttore
@@ -20,12 +20,31 @@ namespace esercizioLavoratori
             AnniAssunzione = AnniAssunzione;
         }
 
-       
+
         public override string GetDettaglioLavoratore()
         {
             return base.GetDettaglioLavoratore() + " " +
-                "StipendioAnnuale: " + Stipendio + " " +
-                "AnniAssunzione: " + AnniAssunzione + " (Dipendente)";
+                " StipendioAnnuale: " + Stipendio + " " +
+                "AnniAssunzione: " + AnniAssunzione;
+        }
+        public override float StipendioMensile()
+        {
+            return Stipendio / 12;
+        }
+        public override float Tasse()
+        {
+            
+            if (Stipendio < 6000)
+                return 0;
+            if (Stipendio <= 15000 || Stipendio >= 6000)
+                return Stipendio * 15 / 100;
+            if (Stipendio > 15000 || Stipendio <= 25000)
+                return Stipendio * 30 / 100;
+            if (Stipendio > 25000 || Stipendio <= 35000)
+                return Stipendio * 40 / 100;
+            if (Stipendio > 35000)
+                return Stipendio * 50 / 100;
+            else { return 0; }
         }
     }
 }

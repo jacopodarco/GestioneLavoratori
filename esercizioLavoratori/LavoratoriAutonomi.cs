@@ -8,7 +8,7 @@ namespace esercizioLavoratori
 {
     class LavoratoriAutonomi : Lavoratore
     {
-        public int BilancioMedio { get; set; }
+        public float BilancioMedio { get; set; }
         public int AnniAttivita { get; set; }
         public LavoratoriAutonomi(string nome, string cognome, int età, Sesso genere)
             : base(nome, cognome, età, genere)
@@ -21,11 +21,22 @@ namespace esercizioLavoratori
         public override string GetDettaglioLavoratore()
         {
             return base.GetDettaglioLavoratore()  + " " +
-                "BilancioAnnuale: " + BilancioMedio + " " +
-                "AnniAttività: " + AnniAttivita +
-                " (Autonomo)";
+                " BilancioAnnuale: " + BilancioMedio + " " +
+                "AnniAttività: " + AnniAttivita  ;
         }
+        public override float StipendioMensile()
+        {
+            return BilancioMedio / 12;
+        }
+        public override float Tasse()
+        {
+            if(BilancioMedio < 50000)
+            {
+                return BilancioMedio * 15 / 100;
+            }
+            else { return BilancioMedio * 30 / 100; }
 
+        }
 
     }
 }
