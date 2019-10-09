@@ -22,21 +22,6 @@ namespace esercizioLavoratori
              "\r\n4 = Ordina lavoratori in base allo stipendio" +
              "\r\n5 = Ordina lavoratori in base agli anni di lavoro");
             int z = Int32.Parse(Console.ReadLine());
-/*
-                    array[] sortedDipendenti = array.OrderBy
-                (lavDipendenti => lavDipendenti.StipendioMensile()).ToArray();
-
-                    LavoratoreAutonomo[] sortedAutonomi = lavoratoriAutonomi.OrderBy
-                        (lavAutonomi => lavAutonomi.StipendioMensile()).ToArray();
-                    
-                    IList<Lavoratore> lista = new List<Lavoratore>();
-                    lista.Add(new LavoratoriAutonomi("Luca", "Marinello", 34, Sesso.M) { AnniAttivita = 42, BilancioMedio = 100000 });
-                    lista.Add(new LavoratoriAutonomi("Luca", "Prandin", 44, Sesso.M) { AnniAttivita = 13, BilancioMedio = 34897 });
-                    lista.Add(new LavoratoriAutonomi("Paolo", "Bonolis", 21, Sesso.N) { AnniAttivita = 1, BilancioMedio = 12 });
-                    lista.Add(new LavoratoriDipendenti("Sallustio", "Regale", 18, Sesso.M) { Stipendio = 24000, AnniAssunzione = 14 });
-                    lista.Add(new LavoratoriDipendenti("Alberta", "Giorgiani", 78, Sesso.F) { Stipendio = 36000, AnniAssunzione = 24 });
-                    lista.Add(new LavoratoriDipendenti("Marika", "Gonzales", 67, Sesso.F) { Stipendio = 909090, AnniAssunzione = 34 });
-                    */
 
             LavoratoriAutonomi[] array = new LavoratoriAutonomi[3];
                     array[0] = new LavoratoriAutonomi("Luca", "Marinello", 34, Sesso.M) { AnniAttivita = 42, BilancioMedio = 100000 };
