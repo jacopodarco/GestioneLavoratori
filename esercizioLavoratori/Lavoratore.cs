@@ -42,7 +42,17 @@ namespace esercizioLavoratori
         {
             return 0;
         }
-       
+        public override bool Equals(object obj)
+        {
+            bool result = false;
+            Lavoratore temp = obj as Lavoratore; //no errore ma se non riesce temp = null
+            if (temp != null)
+            {
+                result = temp.Cognome == this.Cognome && temp.Nome == this.Nome && temp.Età == this.Età;
+            }
+            return result;
+        }
+
     }
 }
 

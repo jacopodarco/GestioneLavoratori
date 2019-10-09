@@ -23,10 +23,12 @@ namespace esercizioLavoratori
                     "\r\n5 = Ordina lavoratori in base agli anni di lavoro");
                     int z = Int32.Parse(Console.ReadLine());
 
-                    LavoratoriAutonomi[] array = new LavoratoriAutonomi[3];
+                    LavoratoriAutonomi[] array = new LavoratoriAutonomi[4];
                             array[0] = new LavoratoriAutonomi("Luca", "Marinello", 34, Sesso.M) { AnniAttivita = 42, BilancioMedio = 10 };
                             array[1] = new LavoratoriAutonomi("Luca", "Prandin", 44, Sesso.M) { AnniAttivita = 13, BilancioMedio = 34897 };
                             array[2] = new LavoratoriAutonomi("Paolo", "Bonolis", 21, Sesso.N) { AnniAttivita = 19, BilancioMedio = 1442 };
+                            array[3] = new LavoratoriAutonomi("Paolo", "Bonolis", 21, Sesso.N) { AnniAttivita = 19, BilancioMedio = 1442 };
+
 
                     switch (z)
             {
@@ -35,7 +37,14 @@ namespace esercizioLavoratori
                         {
                             Console.WriteLine(g.GetDettaglioLavoratore());
                         }
-                        Console.ReadLine();
+                            Console.WriteLine("Esistono duplicati nel database?");
+
+                            for (int i = 1; i < array.Length; i++)
+                            {
+                                Console.WriteLine("{0}", array[i].Equals(array[i-1]));
+                            }
+
+                            Console.ReadLine();
                         break;
 
                     case 2:           
