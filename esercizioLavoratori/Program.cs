@@ -46,37 +46,18 @@ namespace esercizioLavoratori
                     switch (z)
             {
                 case 1:
-                            foreach (var g in array)
-                            {
-                                Console.WriteLine(g.GetDettaglioLavoratore());
-                            }
-                            Console.ReadLine();
+                    foreach (var g in array)
+                    {
+                        Console.WriteLine(g.GetDettaglioLavoratore());
+                    }
+                    Console.ReadLine();
                     break;
 
-                case 2:
-                            /*
-                             * dichiarare le variabili a1,a2,a3 o cambiare metodo
-                    string nome;
-                    string cognome;
-                    Console.WriteLine("Inserire il nome della persona di cui si vuole ottenere lo stipendio mensile tra quelli in elenco: "
-                        + "\r\nLuca Marinello \r\nLuca Prandin \r\nPaolo Bonolis");
-                    Console.WriteLine("Nome: ");
-                    nome = Console.ReadLine();
-                    Console.WriteLine("Cognome: ");
-                    cognome = Console.ReadLine();
-                    if (nome == a1.Nome && cognome == a1.Cognome)
+                case 2:           
+                    foreach (var g in array)
                     {
-                        Console.WriteLine("Il bilancio mensile è: " + a1.StipendioMensile());
+                        Console.WriteLine("Il lavoratore Dipendente " + g.Cognome + " guadagna " + g.StipendioMensile());
                     }
-                    if (nome == a2.Nome && cognome == a2.Cognome)
-                    {
-                        Console.WriteLine("Il bilancio mensile è: " + a2.StipendioMensile());
-                    }
-                    if (nome == a3.Nome && cognome == a3.Cognome)
-                    {
-                        Console.WriteLine("Il bilancio mensile è: " + a3.StipendioMensile());
-                    }
-                    */
                     Console.ReadLine();
                     break;
 
@@ -94,17 +75,17 @@ namespace esercizioLavoratori
                             (lavAutonomi => lavAutonomi.StipendioMensile()).ToArray();
                             foreach (var g in sortedAutonomi)
                             {
-                                Console.WriteLine(g.GetDettaglioLavoratore() + g.StipendioMensile());
+                                Console.WriteLine(g.GetDettaglioLavoratore());
                             }
                             Console.ReadLine();
 
                             break;
                 case 5:
                             LavoratoriAutonomi[] sortedAutonomi1 = array.OrderBy
-                                   (lavAutonomi => lavAutonomi.GetDettaglioLavoratore()).ToArray();
+                                   (lavAutonomi => lavAutonomi.AnniAttivita).ToArray();
                             foreach (var g in sortedAutonomi1)
                             {
-                                Console.WriteLine(g.GetDettaglioLavoratore() + g.StipendioMensile());
+                                Console.WriteLine(g.GetDettaglioLavoratore());
                             }
                             Console.ReadLine();
                             break;
@@ -136,28 +117,12 @@ namespace esercizioLavoratori
                             break;
 
                         case 2:
-                            /*
-                            string nome;
-                            string cognome;
-                            Console.WriteLine("Inserire il nome della persona di cui si vuole ottenere lo stipendio mensile tra quelli in elenco: "
-                                + "\r\nSallustio Regale \r\nAlberta Giorgiani \r\nMarika Gonzales\r\n");
-                            Console.WriteLine("Nome: ");
-                            nome = Console.ReadLine();
-                            Console.WriteLine("Cognome: ");
-                            cognome = Console.ReadLine();
-                            if (nome == d1.Nome && cognome == d1.Cognome)
+                            
+                            foreach (var g in array1)
                             {
-                                Console.WriteLine("Lo stipendio mensile è: " + d1.StipendioMensile());
+                                Console.WriteLine("Il lavoratore Dipendente " + g.Cognome + " guadagna " + g.StipendioMensile());
                             }
-                            if (nome == d2.Nome && cognome == d2.Cognome)
-                            {
-                                Console.WriteLine("Lo stipendio mensile è: " + d2.StipendioMensile());
-                            }
-                            if (nome == d3.Nome && cognome == d3.Cognome)
-                            {
-                                Console.WriteLine("Lo stipendio mensile è: " + d3.StipendioMensile());
-                            }
-                            */
+                            Console.ReadLine();
                             Console.ReadLine();
                             break;
 
@@ -183,6 +148,13 @@ namespace esercizioLavoratori
                             break;
 
                         case 5:
+                            LavoratoriDipendenti[] sortedAutonomi1 = array1.OrderBy
+                                (lavAutonomi => lavAutonomi.AnniAssunzione).ToArray();
+                            foreach (var g in sortedAutonomi1)
+                            {
+                                Console.WriteLine(g.GetDettaglioLavoratore());
+                            }
+                            Console.ReadLine();
                             break;
                     }
                             break;
