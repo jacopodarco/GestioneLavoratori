@@ -10,15 +10,11 @@ namespace esercizioLavoratori
     {
         static void Main(string[] args)
         {
-            int w = 0;
-
-            do
-            {
 
                 try
                 {
                     Console.WriteLine("Scegliere in quale database entrare:\r\n1 = Lavoratori autonomi\r\n2 = Lavoratori dipendenti");
-                    w = Int32.Parse(Console.ReadLine());
+                    int w = Int32.Parse(Console.ReadLine());
                     if (w != 1 && w != 2)
                     {
                         Console.WriteLine("Errore non esiste il caso chiesto!");
@@ -38,6 +34,10 @@ namespace esercizioLavoratori
                             try
                             {
                                 int z = Int32.Parse(Console.ReadLine());
+                                if (z != 1 && z!=2 && z!=3 && z!=4 && z!=5)
+                                {
+                                    Console.WriteLine("Errore il valore inserito non è valido cabron!");
+                                }
 
                                 LavoratoriAutonomi[] array = new LavoratoriAutonomi[5];
                                 array[0] = new LavoratoriAutonomi("Luca", "Marinello", 34, Sesso.M) { AnniAttivita = 42, BilancioMedio = 10 };
@@ -125,6 +125,10 @@ namespace esercizioLavoratori
 
 
                                 int x = Int32.Parse(Console.ReadLine());
+                                if (x != 1 && x != 2 && x != 3 && x != 4 && x != 5)
+                                {
+                                    Console.WriteLine("Errore il valore inserito non è valido cabron!");
+                                }
 
                                 LavoratoriDipendenti[] array1 = new LavoratoriDipendenti[3];
                                 array1[0] = new LavoratoriDipendenti("Sallustio", "Regale", 18, Sesso.M) { Stipendio = 240000, AnniAssunzione = 11 };
@@ -210,7 +214,6 @@ namespace esercizioLavoratori
                     Console.WriteLine("Grazie per avere usato i Database della Nasa, arrivederci!");
                 }
                 Console.ReadLine();
-            } while (w != 1 && w != 2);
         }
     }
 }
