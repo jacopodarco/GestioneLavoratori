@@ -40,7 +40,7 @@ namespace esercizioLavoratori
                                 }
 
                                 LavoratoriAutonomi[] array = new LavoratoriAutonomi[5];
-                                array[0] = new LavoratoriAutonomi("Luca", "Marinello", 34, Sesso.M) { AnniAttivita = 42, BilancioMedio = 10 };
+                                array[0] = new LavoratoriAutonomi("Luca", "Marinello", 33, Sesso.M) { AnniAttivita = 42, BilancioMedio = 10 };
                                 array[1] = new LavoratoriAutonomi("Luca", "Prandin", 44, Sesso.M) { AnniAttivita = 13, BilancioMedio = 34897 };
                                 array[2] = new LavoratoriAutonomi("Paolo", "Bonolis", 21, Sesso.N) { AnniAttivita = 19, BilancioMedio = 1442 };
                                 array[3] = new LavoratoriAutonomi("Paolo", "Bonolis", 21, Sesso.N) { AnniAttivita = 19, BilancioMedio = 1442 };
