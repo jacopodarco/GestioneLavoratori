@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace esercizioLavoratori
 {
+    /// <summary>
+    /// Indica il sesso del lavoratore, può essere maschio femmina o gender
+    /// </summary>
     enum Sesso
     {
         N, F, M
     }
     /// <summary>
-    /// cjovhsdohjpihsp
+    /// Classe padre lavoratore
     /// </summary>
     class Lavoratore
     {
@@ -77,21 +80,22 @@ namespace esercizioLavoratori
         {
             return 0;
         }
+
         /// <summary>
         /// metodo per confrontare elementi degli array
         /// </summary>
         /// <param name="obj">oggetto di confronto</param>
         /// <returns></returns>
-        public override bool Equals(object obj)
-        {
-            bool result = false;
-            Lavoratore temp = obj as Lavoratore; //no errore ma se non riesce temp = null
-            if (temp != null)
-            {
-                result = temp.Cognome == this.Cognome && temp.Nome == this.Nome && temp.Età == this.Età;
-            }
-            return result;
-        }
+        //public override bool Equals(object obj)
+        //{
+        //    bool result = false;
+        //    Lavoratore temp = obj as Lavoratore; //no errore ma se non riesce temp = null
+        //    if (temp != null)
+        //    {
+        //        result = temp.Cognome == this.Cognome && temp.Nome == this.Nome && temp.Età == this.Età;
+        //    }
+        //    return result;
+        //}
 
     }
 }

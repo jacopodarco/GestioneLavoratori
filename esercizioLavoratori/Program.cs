@@ -44,9 +44,7 @@ namespace esercizioLavoratori
                                 array[1] = new LavoratoriAutonomi("Luca", "Prandin", 44, Sesso.M) { AnniAttivita = 13, BilancioMedio = 34897 };
                                 array[2] = new LavoratoriAutonomi("Paolo", "Bonolis", 21, Sesso.N) { AnniAttivita = 19, BilancioMedio = 1442 };
                                 array[3] = new LavoratoriAutonomi("Paolo", "Bonolis", 21, Sesso.N) { AnniAttivita = 19, BilancioMedio = 1442 };
-                                array[4] = new LavoratoriAutonomi("Luca", "Prandin", 44, Sesso.M) { AnniAttivita = 13, BilancioMedio = 34897 };
-
-
+                                array[4] = new LavoratoriAutonomi("Salerno", "ReggioCalabria", 404, Sesso.M) { AnniAttivita = 193, BilancioMedio = 3488897 };
 
                                 switch (z)
                                 {
@@ -130,11 +128,13 @@ namespace esercizioLavoratori
                                     Console.WriteLine("Errore il valore inserito non è valido cabron!");
                                 }
 
-                                LavoratoriDipendenti[] array1 = new LavoratoriDipendenti[3];
+                                LavoratoriDipendenti[] array1 = new LavoratoriDipendenti[4];
                                 array1[0] = new LavoratoriDipendenti("Sallustio", "Regale", 18, Sesso.M) { Stipendio = 240000, AnniAssunzione = 11 };
                                 array1[1] = new LavoratoriDipendenti("Alberta", "Giorgiani", 78, Sesso.F) { Stipendio = 36000, AnniAssunzione = 44 };
                                 array1[2] = new LavoratoriDipendenti("Marika", "Gonzales", 67, Sesso.F) { Stipendio = 909090, AnniAssunzione = 33 };
-                                switch (x)
+                                array1[3] = new LavoratoriDipendenti("Graziana", "Fronzoni", 43, Sesso.N) { Stipendio = 23000, AnniAssunzione = 27 };
+
+                            switch (x)
                                 {
                                     case 1:
 
